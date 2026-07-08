@@ -1,0 +1,1476 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0603.1643                               -->
+<workbook original-version='18.1' source-build='2026.2.0 (20262.26.0603.1643)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <ParameterAction />
+    <ParameterActionClearSelection />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='ColorStart' datatype='real' name='[ColorStart]' param-domain-type='any' role='measure' type='quantitative' value='204019600.0'>
+        <calculation class='tableau' formula='204019600.0' />
+      </column>
+      <column caption='Parameter 1' datatype='real' default-format='N' name='[Parameter 2111907910033408]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+        <calculation class='tableau' formula='0.0' />
+      </column>
+      <column caption='Constant' datatype='real' default-format='n#,##0;-#,##0' name='[Parameter 2111907911159811]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+        <calculation class='tableau' formula='0.0' />
+      </column>
+    </datasource>
+    <datasource caption='stock_prices' inline='true' name='federated.0fj8l0i0u074bl17x8xtv032zlvt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='stock_prices' name='textscan.1ai0guk1hofsiw12h9nyw1l2fyvj'>
+            <connection class='textscan' directory='C:/Users/Alexx/OneDrive/Desktop/GitHub/AI-Investment-Decision-Engine-Version-3/New AI investment analysis' filename='stock_prices.xls' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1ai0guk1hofsiw12h9nyw1l2fyvj' name='stock_prices.xls' table='[stock_prices.xls]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='real' name='Close' ordinal='0' />
+            <column datatype='real' name='High' ordinal='1' />
+            <column datatype='real' name='Low' ordinal='2' />
+            <column datatype='real' name='Open' ordinal='3' />
+            <column datatype='integer' name='Volume' ordinal='4' />
+            <column datatype='real' name='Daily Return' ordinal='5' />
+            <column datatype='real' name='MA20' ordinal='6' />
+            <column datatype='real' name='MA50' ordinal='7' />
+            <column datatype='real' name='Volatility' ordinal='8' />
+            <column datatype='real' name='RSI' ordinal='9' />
+            <column datatype='real' name='Tomorrow' ordinal='10' />
+            <column datatype='integer' name='Tomorrow Up' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Close]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Close</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>High</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[High]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>High</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Low]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Low</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Open]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Volume]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Volume</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Daily Return</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Daily Return]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Daily Return</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MA20</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MA20]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>MA20</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MA50</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MA50]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>MA50</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volatility</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Volatility]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Volatility</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RSI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RSI]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>RSI</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tomorrow</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Tomorrow]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Tomorrow</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tomorrow Up</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Tomorrow Up]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Tomorrow Up</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Ma20' datatype='real' name='[MA20]' role='measure' type='quantitative' />
+      <column caption='Ma50' datatype='real' name='[MA50]' role='measure' type='quantitative' />
+      <column caption='stock_prices.xls' datatype='table' name='[__tableau_internal_object_id__].[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_01iecwd1ppycl611vnvuy1sxz8b3.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/08/2026 06:02:02 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Close</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Close]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Close</remote-alias>
+              <ordinal>0</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1467</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>High</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[High]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>High</remote-alias>
+              <ordinal>1</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Low</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Low]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Low</remote-alias>
+              <ordinal>2</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Open</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Open]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Open</remote-alias>
+              <ordinal>3</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Volume</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Volume]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Volume</remote-alias>
+              <ordinal>4</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Daily Return</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Daily Return]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Daily Return</remote-alias>
+              <ordinal>5</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1565</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MA20</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[MA20]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MA20</remote-alias>
+              <ordinal>6</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MA50</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[MA50]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MA50</remote-alias>
+              <ordinal>7</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Volatility</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Volatility]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Volatility</remote-alias>
+              <ordinal>8</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>RSI</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[RSI]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>RSI</remote-alias>
+              <ordinal>9</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tomorrow</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Tomorrow]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tomorrow</remote-alias>
+              <ordinal>10</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1467</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tomorrow Up</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Tomorrow Up]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tomorrow Up</remote-alias>
+              <ordinal>11</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='stock_prices.xls' id='stock_prices.xls_83751F79ACA7489EA2A15C2009FB8C13'>
+            <properties context=''>
+              <relation connection='textscan.1ai0guk1hofsiw12h9nyw1l2fyvj' name='stock_prices.xls' table='[stock_prices.xls]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='real' name='Close' ordinal='0' />
+                  <column datatype='real' name='High' ordinal='1' />
+                  <column datatype='real' name='Low' ordinal='2' />
+                  <column datatype='real' name='Open' ordinal='3' />
+                  <column datatype='integer' name='Volume' ordinal='4' />
+                  <column datatype='real' name='Daily Return' ordinal='5' />
+                  <column datatype='real' name='MA20' ordinal='6' />
+                  <column datatype='real' name='MA50' ordinal='7' />
+                  <column datatype='real' name='Volatility' ordinal='8' />
+                  <column datatype='real' name='RSI' ordinal='9' />
+                  <column datatype='real' name='Tomorrow' ordinal='10' />
+                  <column datatype='integer' name='Tomorrow Up' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='stock_prices (2)' inline='true' name='federated.0tki3pe1azxgpl16v4sxm19stxqs' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='stock_prices' name='textscan.0v1qx1q1093mie13ouu9a0r9f7a7'>
+            <connection class='textscan' directory='C:/Users/Alexx/Downloads' filename='stock_prices.xls' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0v1qx1q1093mie13ouu9a0r9f7a7' name='stock_prices.xls' table='[stock_prices.xls]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='real' name='Close' ordinal='1' />
+            <column datatype='real' name='High' ordinal='2' />
+            <column datatype='real' name='Low' ordinal='3' />
+            <column datatype='real' name='Open' ordinal='4' />
+            <column datatype='integer' name='Volume' ordinal='5' />
+            <column datatype='real' name='Daily Return' ordinal='6' />
+            <column datatype='real' name='MA20' ordinal='7' />
+            <column datatype='real' name='MA50' ordinal='8' />
+            <column datatype='real' name='Volatility' ordinal='9' />
+            <column datatype='real' name='RSI' ordinal='10' />
+            <column datatype='real' name='Tomorrow' ordinal='11' />
+            <column datatype='integer' name='Tomorrow Up' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Close</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Close]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Close</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>High</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[High]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>High</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Low</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Low]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Low</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Open</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Open]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Open</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volume</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Volume]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Volume</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Daily Return</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Daily Return]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Daily Return</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MA20</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MA20]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>MA20</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MA50</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MA50]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>MA50</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Volatility</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Volatility]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Volatility</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RSI</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RSI]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>RSI</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tomorrow</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Tomorrow]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Tomorrow</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tomorrow Up</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Tomorrow Up]</local-name>
+            <parent-name>[stock_prices.xls]</parent-name>
+            <remote-alias>Tomorrow Up</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Close]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Daily Return]' role='measure' type='quantitative' />
+      <column datatype='real' name='[High]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Low]' role='measure' type='quantitative' />
+      <column caption='Ma20' datatype='real' name='[MA20]' role='measure' type='quantitative' />
+      <column caption='Ma50' datatype='real' name='[MA50]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Open]' role='measure' type='quantitative' />
+      <column datatype='real' name='[RSI]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Tomorrow Up]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Tomorrow]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Volatility]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Volume]' role='measure' type='quantitative' />
+      <column caption='stock_prices.xls' datatype='table' name='[__tableau_internal_object_id__].[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:stock_prices.xls_942530D9338F41C0A8BC39539ACE2813:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Close]' derivation='Sum' name='[sum:Close:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Daily Return]' derivation='Sum' name='[sum:Daily Return:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[High]' derivation='Sum' name='[sum:High:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Low]' derivation='Sum' name='[sum:Low:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MA20]' derivation='Sum' name='[sum:MA20:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MA50]' derivation='Sum' name='[sum:MA50:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Open]' derivation='Sum' name='[sum:Open:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[RSI]' derivation='Sum' name='[sum:RSI:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Tomorrow Up]' derivation='Sum' name='[sum:Tomorrow Up:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Tomorrow]' derivation='Sum' name='[sum:Tomorrow:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Volatility]' derivation='Sum' name='[sum:Volatility:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Volume]' derivation='Sum' name='[sum:Volume:qk]' pivot='key' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1ruk8hk11xayur162su3809zzn78.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/08/2026 08:30:02 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Close</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Close]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Close</remote-alias>
+              <ordinal>1</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1467</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>High</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[High]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>High</remote-alias>
+              <ordinal>2</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Low</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Low]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Low</remote-alias>
+              <ordinal>3</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Open</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Open]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Open</remote-alias>
+              <ordinal>4</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Volume</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Volume]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Volume</remote-alias>
+              <ordinal>5</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Daily Return</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Daily Return]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Daily Return</remote-alias>
+              <ordinal>6</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1565</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MA20</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[MA20]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MA20</remote-alias>
+              <ordinal>7</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MA50</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[MA50]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MA50</remote-alias>
+              <ordinal>8</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Volatility</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Volatility]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Volatility</remote-alias>
+              <ordinal>9</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>RSI</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[RSI]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>RSI</remote-alias>
+              <ordinal>10</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1585</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tomorrow</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Tomorrow]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tomorrow</remote-alias>
+              <ordinal>11</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1467</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tomorrow Up</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Tomorrow Up]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tomorrow Up</remote-alias>
+              <ordinal>12</ordinal>
+              <family>stock_prices.xls</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[stock_prices.xls_942530D9338F41C0A8BC39539ACE2813]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:RSI:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Close:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:High:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Volatility:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Tomorrow:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Low:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[__tableau_internal_object_id__].[cnt:stock_prices.xls_942530D9338F41C0A8BC39539ACE2813:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Volume:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:MA50:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Open:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:MA20:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Tomorrow Up:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Daily Return:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='stock_prices.xls' id='stock_prices.xls_942530D9338F41C0A8BC39539ACE2813'>
+            <properties context=''>
+              <relation connection='textscan.0v1qx1q1093mie13ouu9a0r9f7a7' name='stock_prices.xls' table='[stock_prices.xls]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='real' name='Close' ordinal='1' />
+                  <column datatype='real' name='High' ordinal='2' />
+                  <column datatype='real' name='Low' ordinal='3' />
+                  <column datatype='real' name='Open' ordinal='4' />
+                  <column datatype='integer' name='Volume' ordinal='5' />
+                  <column datatype='real' name='Daily Return' ordinal='6' />
+                  <column datatype='real' name='MA20' ordinal='7' />
+                  <column datatype='real' name='MA50' ordinal='8' />
+                  <column datatype='real' name='Volatility' ordinal='9' />
+                  <column datatype='real' name='RSI' ordinal='10' />
+                  <column datatype='real' name='Tomorrow' ordinal='11' />
+                  <column datatype='integer' name='Tomorrow Up' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_32588476A2584A3AABE2168AEC45AEB6]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Stock Price' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Stock Price' />
+      </command>
+    </action>
+    <edit-parameter-action caption='ParameterColorStart1' name='[Action2_382E2321D68A48AFABAF2F9BEE06D05E]'>
+      <activation type='on-select' />
+      <source type='sheet' worksheet='Trading Volume' />
+      <agg-type type='min' />
+      <clear-option type='do-nothing' value='i:1' />
+      <params>
+        <param name='source-field' value='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[Multiple Values]' />
+        <param name='target-parameter' value='[Parameters].[ColorStart]' />
+      </params>
+    </edit-parameter-action>
+  </actions>
+  <worksheets>
+    <worksheet name='Daiy Returns'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stock_prices (2)' name='federated.0tki3pe1azxgpl16v4sxm19stxqs' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Constant' datatype='real' default-format='n#,##0;-#,##0' name='[Parameter 2111907911159811]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+              <calculation class='tableau' formula='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0tki3pe1azxgpl16v4sxm19stxqs'>
+            <column datatype='real' name='[Daily Return]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Daily Return]' derivation='Sum' name='[sum:Daily Return:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='solid' />
+            <format attr='stroke-color' id='refline0' value='#898989' />
+            <format attr='fill-color' id='refline0' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <reference-line axis-column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Daily Return:qk]' enable-instant-analytics='true' formula='min' id='refline0' label-type='value' paired-id='refline1' scope='per-pane' symmetric='false' value-column='[Parameters].[Parameter 2111907911159811]' z-order='1' />
+            <reference-line axis-column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Daily Return:qk]' enable-instant-analytics='true' formula='max' id='refline1' label-type='none' paired-id='refline0' scope='per-pane' symmetric='false' value-column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Daily Return:qk]' z-order='1' />
+          </pane>
+        </panes>
+        <rows>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Daily Return:qk]</rows>
+        <cols>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{CE52D807-142A-4447-B1D1-0A624717B264}' />
+    </worksheet>
+    <worksheet name='RSI (Relative Strength Index)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stock_prices (2)' name='federated.0tki3pe1azxgpl16v4sxm19stxqs' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Constant' datatype='real' default-format='n#,##0;-#,##0' name='[Parameter 2111907911159811]' param-domain-type='any' role='measure' type='quantitative' value='0.0'>
+              <calculation class='tableau' formula='0.0' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0tki3pe1azxgpl16v4sxm19stxqs'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[RSI]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[RSI]' derivation='Sum' name='[sum:RSI:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-size' id='refline0' value='1' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='stroke-color' id='refline1' value='#aa0000d0' />
+            <format attr='stroke-color' id='refline0' value='#aa0000ed' />
+            <format attr='fill-above' id='refline2' value='#00000000' />
+            <format attr='fill-below' id='refline2' value='#00000000' />
+            <format attr='stroke-color' id='refline2' value='#aa00004b' />
+            <format attr='fill-above' id='refline3' value='#00000000' />
+            <format attr='fill-below' id='refline3' value='#00000000' />
+            <format attr='stroke-color' id='refline3' value='#aa00004b' />
+            <format attr='fill-above' id='refline4' value='#00000000' />
+            <format attr='fill-below' id='refline4' value='#00000000' />
+            <format attr='stroke-color' id='refline4' value='#468d684b' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <reference-line axis-column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:RSI:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='value' probability='95' scope='per-table' value-column='[Parameters].[Parameter 2111907911159811]' z-order='1' />
+            <reference-line axis-column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:RSI:qk]' enable-instant-analytics='true' formula='constant' id='refline3' label='Overbought (70)' label-type='custom' scope='per-table' value='70.0' value-column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:RSI:qk]' z-order='2' />
+            <reference-line axis-column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:RSI:qk]' enable-instant-analytics='true' formula='constant' id='refline4' label='Oversold (30)' label-type='custom' scope='per-pane' value='30.0' value-column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:RSI:qk]' z-order='3' />
+          </pane>
+        </panes>
+        <rows>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:RSI:qk]</rows>
+        <cols>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{AB4F8B57-D45B-4050-B304-C1CAB79B1530}' />
+    </worksheet>
+    <worksheet name='Stock Price'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Price Trend &amp; Moving Averages</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stock_prices (2)' name='federated.0tki3pe1azxgpl16v4sxm19stxqs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tki3pe1azxgpl16v4sxm19stxqs'>
+            <column datatype='real' name='[Close]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column caption='Ma20' datatype='real' name='[MA20]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Close]' derivation='Sum' name='[sum:Close:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MA20]' derivation='Sum' name='[sum:MA20:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[:Measure Names]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Close:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:MA20:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[:Measure Names]' value='Close Price'>
+              <formatted-text>
+                <run>Close Price</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.42779004573822021' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[Multiple Values]</rows>
+        <cols>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{1BECDE64-01DD-468C-82DE-FF79DC6AE7D3}' />
+    </worksheet>
+    <worksheet name='Trading Volume'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Daily Trading Volume</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='stock_prices (2)' name='federated.0tki3pe1azxgpl16v4sxm19stxqs' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tki3pe1azxgpl16v4sxm19stxqs'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Volume]' role='measure' type='quantitative' />
+            <column-instance column='[Volume]' derivation='Sum' name='[sum:Volume:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Week-Trunc' name='[twk:Date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[:Measure Names]'>
+            <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Volume:qk]&quot;' user:op='manual' />
+          </filter>
+          <slices>
+            <column>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Volume:qk]' field-type='quantitative' min='0' range-type='fixedmin' scope='rows' type='space' />
+            <format attr='width' field='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Volume:qk]' value='52' />
+            <encoding attr='space' class='0' field='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[twk:Date:qk]' field-type='quantitative' max='#2026-11-21 20:08:16.551#' min='#2019-10-20 03:51:43.448#' range-type='fixed' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[twk:Date:qk]' scope='cols' value='Date' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Volume:qk]' value='n#,##0,,,B;-#,##0,,,B' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+                <format attr='mark-transparency' value='198' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[sum:Volume:qk]</rows>
+        <cols>[federated.0tki3pe1azxgpl16v4sxm19stxqs].[twk:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{191C4905-E99F-4759-9E23-B4EF8DD80533}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>AI Investment Decision Engine Executive Dashboard | NVIDIA Stock Analysis</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='11'>Technical Analysis using Python and Tableau Data Source: Yahoo Finance Period: January 2020 – Present</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='900' maxwidth='1200' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='74111' id='10' param='horz' type-v2='layout-flow' w='98666' x='667' y='889'>
+            <zone h='74111' id='5' param='vert' type-v2='layout-flow' w='98666' x='667' y='889'>
+              <zone fixed-size='74' h='9111' id='7' is-fixed='true' type-v2='title' w='98666' x='667' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='65000' id='6' type-v2='layout-basic' w='98666' x='667' y='10000'>
+                <zone h='41227' id='8' name='Stock Price' w='98666' x='667' y='10000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='23773' id='12' name='Trading Volume' w='49333' x='667' y='51227'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='23773' id='17' name='Daiy Returns' w='49333' x='50000' y='51227'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='19889' id='18' name='RSI (Relative Strength Index)' w='98666' x='667' y='75000'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='4222' id='20' type-v2='text' w='98666' x='667' y='94889'>
+            <formatted-text>
+              <run fontcolor='#000000' fontname='Benton Sans Book'>Developed by Alex Alvarez Python • Tableau • Yahoo Finance</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Benton Sans Book'>AI Investment Decision Engine Executive Dashboard | NVIDIA Stock Analysis</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='11'>Technical Analysis using Python and Tableau Data Source: Yahoo Finance Period: January 2020 – Present</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='22' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='21' param='vert' type-v2='layout-flow' w='98666' x='667' y='889'>
+                <zone fixed-size='134' h='15778' id='7' type-v2='title' w='98666' x='667' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37000' id='8' is-fixed='true' name='Stock Price' w='98666' x='667' y='16667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='184' h='21333' id='12' is-fixed='true' name='Trading Volume' w='49333' x='667' y='53667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='184' h='21333' id='17' is-fixed='true' name='Daiy Returns' w='49333' x='50000' y='53667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='171' h='19889' id='18' is-fixed='true' name='RSI (Relative Strength Index)' w='98666' x='667' y='75000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4222' id='20' type-v2='text' w='98666' x='667' y='94889'>
+                  <formatted-text>
+                    <run fontcolor='#000000' fontname='Benton Sans Book'>Developed by Alex Alvarez Python • Tableau • Yahoo Finance</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BE748CF6-129B-4B59-AB6D-FAD76589B32A}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Stock Price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{10F2ED00-60F7-4DD9-88D9-90B03F8EB8C2}' />
+    </window>
+    <window class='worksheet' name='Trading Volume'>
+      <cards>
+        <edge name='left'>
+          <strip size='217'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tki3pe1azxgpl16v4sxm19stxqs].[Multiple Values]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{ED215F59-EA2C-42D8-BA5D-84A321D09AB8}' />
+    </window>
+    <window class='worksheet' name='Daiy Returns'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 2111907910033408]' type='parameter' />
+            <card mode='type_in' param='[Parameters].[Parameter 2111907911159811]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3F92DFE9-2481-4E7D-AF36-E77262C411CB}' />
+    </window>
+    <window class='worksheet' name='RSI (Relative Strength Index)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EB12206F-732C-4B28-BAD1-A7662BD41F6A}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Daiy Returns'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='RSI (Relative Strength Index)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Stock Price'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Trading Volume'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{75AB77FD-A048-435D-A2D3-0A0952E74B07}' />
+    </window>
+  </windows>
+</workbook>
