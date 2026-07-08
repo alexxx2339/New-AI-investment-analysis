@@ -1,9 +1,11 @@
-<img width="1304" height="882" alt="dashboard" src="https://github.com/user-attachments/assets/bc8b3e0e-212d-42b4-a877-0080bbb6a61b" />
 # \# AI Investment Decision Engine
 
-# 
+<img width="1304" height="882" alt="dashboard" src="https://github.com/user-attachments/assets/bc8b3e0e-212d-42b4-a877-0080bbb6a61b" />
 
-# !\[Dashboard](images/dashboard.png)
+
+
+
+
 
 # 
 
